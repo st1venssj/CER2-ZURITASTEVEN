@@ -14,22 +14,27 @@ Proyecto web desarrollado en Django y Bootstrap para la gestión y difusión de 
    cd Certamen2
 
 2. Instalar dependencias:
+    ```bash
     pip install -r requirements.txt
 
 3.Aplicar migraciones de la base de datos:
+    ```bash
     py manage.py makemigrations
     py manage.py migrate
 
 4.Crear superusuario para la administracion y pruebas:
+    ```bash
     py manage.py createsuperuser
 
 5.Ejecutar el servidor de desarrollo:
+    ```bash
     py manage.py runserver
 
     Accede a la aplicación en http://127.0.0.1:8000/
 
 
 --------Estructura de Datos de Prueba-----------
+
 Para probar las funcionalidades de filtrado y catálogo, ingresa a http://127.0.0.1:8000/admin/ y registra:
 
 1.Categorías:
@@ -60,3 +65,4 @@ En la terminal aplicamos estos comandos:
     git add .
     git commit -m "Documentacion README.md actualizada y requirements.txt listo"
     git push origin main
+
