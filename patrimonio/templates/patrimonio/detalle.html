@@ -1,0 +1,16 @@
+{% extends 'patrimonio/base.html' %}
+
+{% block title %}{{ lugar.nombre }} - Detalle{% endblock %}
+
+{% block content %}
+    <h1>{{ lugar.nombre }}</h1>
+    <img src="{{ lugar.imagen }}" alt="{{ lugar.nombre }}" width="400">
+    <p><strong>Categoría:</strong> {{ lugar.categoria.nombre }}</p>
+    <p><strong>Ubicación:</strong> {{ lugar.ubicacion }}</p>
+    <p><strong>Año de Construcción:</strong> {{ lugar.anio_construccion }}</p>
+    <p><strong>Descripción:</strong></p>
+    <p>{{ lugar.descripcion }}</p>
+
+    <br>
+    <a href="{% url 'catalogo' %}">← Volver al Catálogo</a>
+{% endblock %}

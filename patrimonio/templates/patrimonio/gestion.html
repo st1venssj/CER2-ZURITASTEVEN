@@ -1,0 +1,35 @@
+{% extends 'patrimonio/base.html' %}
+
+{% block title %}Gestión Patrimonial{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Panel de Gestión Patrimonial</h1>
+    <a href="/admin/patrimonio/lugarpatrimonial/add/" class="btn btn-success" target="_blank">+ Agregar Nuevo Lugar</a>
+</div>
+
+<p class="text-muted">Sección restringida a usuarios autenticados.</p>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Ubicación</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for lugar in lugares %}
+        <tr>
+            <td>{{ lugar.nombre }}</td>
+            <td>{{ lugar.categoria.nombre }}</td>
+            <td>{{ lugar.ubicacion }}</td>
+            <td>
+                <a href="/admin/patrimonio/lugarpatrimonial/{{ lugar.id }}/change/" class="btn btn-warning btn-sm" target="_blank">Editar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

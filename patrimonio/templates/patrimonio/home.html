@@ -1,0 +1,17 @@
+{% extends 'patrimonio/base.html' %}
+
+{% block title %}Inicio - Patrimonio Vivo{% endblock %}
+
+{% block content %}
+    <div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+        <div class="container-fluid py-3">
+            <h1 class="display-5 fw-bold">Bienvenido a la Fundación Patrimonio Vivo</h1>
+            <p class="col-md-10 fs-4 text-muted">
+                Nuestra misión es identificar, documentar y difundir los lugares de interés patrimonial en Chile.
+            </p>
+            <a href="{% url 'catalogo' %}" class="btn btn-primary btn-lg mt-2">
+                Explorar el Catálogo Patrimonial
+            </a>
+        </div>
+    </div>
+{% endblock %}
