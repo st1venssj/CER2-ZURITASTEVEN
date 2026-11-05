@@ -1,68 +1,116 @@
 # Certamen 2 - Fundación Patrimonio Vivo
 
-Proyecto web desarrollado en Django y Bootstrap para la gestión y difusión de lugares de interés patrimonial en Chile.
+Proyecto web desarrollado en **Django y Bootstrap** para la gestión y difusión de lugares de interés patrimonial en Chile.
 
 ## Requisitos Previos
-- Python 3.10 o superior
-- Git
+
+Antes de instalar el proyecto, asegúrate de contar con los siguientes programas:
+
+- Python 3.10 o superior.
+- Git.
 
 ## Instalación y Configuración
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/st1venssj/CER2-ZURITASTEVEN/tree/main
-   cd Certamen2
+### 1. Clonar el repositorio
 
-2. Instalar dependencias:
-    ```bash
-    pip install -r requirements.txt
+```bash
+git clone https://github.com/st1venssj/CER2-ZURITASTEVEN.git
+cd CER2-ZURITASTEVEN
+```
 
-3.Aplicar migraciones de la base de datos:
-    ```bash
-    py manage.py makemigrations
-    py manage.py migrate
+### 2. Instalar dependencias
 
-4.Crear superusuario para la administracion y pruebas:
-    ```bash
-    py manage.py createsuperuser
+```bash
+pip install -r requirements.txt
+```
 
-5.Ejecutar el servidor de desarrollo:
-    ```bash
-    py manage.py runserver
+### 3. Aplicar migraciones de la base de datos
 
-    Accede a la aplicación en http://127.0.0.1:8000/
+```bash
+py manage.py makemigrations
+py manage.py migrate
+```
 
+### 4. Crear superusuario para la administración y pruebas
 
---------Estructura de Datos de Prueba-----------
+```bash
+py manage.py createsuperuser
+```
 
-Para probar las funcionalidades de filtrado y catálogo, ingresa a http://127.0.0.1:8000/admin/ y registra:
+### 5. Ejecutar el servidor de desarrollo
 
-1.Categorías:
-    -Monumento Histórico
-    -Edificio Antiguo
-    -Mural
+```bash
+py manage.py runserver
+```
 
-2.Lugares Patrimoniales:
-    -Reloj de Flores (Categoría: Monumento Histórico, Ubicación: Viña del Mar, Año: 1962)
+Accede a la aplicación desde el siguiente enlace:
 
-    -Muelle Vergara (Categoría: Monumento Histórico, Ubicación: Viña del Mar, Año: 1894)
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-    -El Peral (Categoría: Monumento Histórico, Ubicación: Valparaíso, Año: 1902)
+---
 
-    -Museo a Cielo Abierto de Polanco (Categoría: Mural, Ubicación: Valparaíso, Año: 2012)
+## Estructura de Datos de Prueba
 
---------ROLES Y PERMISOS DE USUARIOS------------
+Para probar las funcionalidades de filtrado y catálogo, ingresa al panel de administración:
 
-    -Usuario Visitante (Anónimo): Puede acceder a la página principal (/) y consultar el catálogo con filtros (/catalogo/).
+[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
-    -Usuario Autenticado (Administrador): Puede acceder al panel de gestión privado (/gestion/) para revisar la lista completa, agregar nuevos lugares o modificar los existentes.   
+Registra las siguientes categorías y lugares patrimoniales:
 
----------Ultimo paso para guardar todo en GitHub---------
+### 1. Categorías
 
-Una vez modificado el 'README.md', presiona 'Ctrl + S' para guardar y ejecuta en la terminal:
+- Monumento Histórico
+- Edificio Antiguo
+- Mural
 
-En la terminal aplicamos estos comandos:
-    git add .
-    git commit -m "Documentacion README.md actualizada y requirements.txt listo"
-    git push origin main
+### 2. Lugares Patrimoniales
+
+| Nombre | Categoría | Ubicación | Año |
+|---|---|---|---|
+| Reloj de Flores | Monumento Histórico | Viña del Mar | 1962 |
+| Muelle Vergara | Monumento Histórico | Viña del Mar | 1894 |
+| El Peral | Monumento Histórico | Valparaíso | 1902 |
+| Museo a Cielo Abierto de Polanco | Mural | Valparaíso | 2012 |
+
+---
+
+## Roles y Permisos de Usuarios
+
+### Usuario Visitante (Anónimo)
+
+- Puede acceder a la página principal (`/`).
+- Puede consultar el catálogo de lugares patrimoniales con filtros (`/catalogo/`).
+
+### Usuario Autenticado (Administrador)
+
+- Puede acceder al panel de gestión privado (`/gestion/`).
+- Puede revisar la lista completa de lugares patrimoniales.
+- Puede agregar nuevos lugares.
+- Puede modificar los lugares existentes.
+
+---
+
+## Último Paso: Guardar los Cambios en GitHub
+
+Una vez modificado el archivo `README.md`, presiona `Ctrl + S` para guardar los cambios.
+
+Luego, ejecuta los siguientes comandos en la terminal:
+
+### 1. Agregar los archivos modificados
+
+```bash
+git add .
+```
+
+### 2. Crear un commit
+
+```bash
+git commit -m "Documentacion README.md actualizada y requirements.txt listo"
+```
+
+### 3. Subir los cambios a GitHub
+
+```bash
+git push origin main
+```
 
